@@ -1,6 +1,23 @@
+Command:
 docker pull devopsdockeruh/simple-web-service:alpine
 docker images
 
+Output:
 REPOSITORY                          TAG       IMAGE ID       CREATED       SIZE
 devopsdockeruh/simple-web-service   ubuntu    4e3362e907d5   11 days ago   83MB
 devopsdockeruh/simple-web-service   alpine    fd312adc88e0   11 days ago   15.7MB
+
+Command:
+docker run -d fd
+docker ps
+
+Output:
+CONTAINER ID   IMAGE     COMMAND                 CREATED          STATUS         PORTS     NAMES
+d6d045e6a442   fd        "/usr/src/app/server"   10 seconds ago   Up 9 seconds             vigorous_goldstine
+
+Command:
+docker exec -it vigorous_goldstine sh
+tail -f ./text.log
+
+Secret message:
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
